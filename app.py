@@ -7,4 +7,7 @@ def processamento_texto(textos):
     return palavras
 
 if __name__ == "__main__":
-    palavras_biblia = processamento_texto()
+    with open("biblia_limpa.txt", "r", encoding="utf-8") as f:
+        biblia_textos = f.read()
+
+    palavras_biblia = processamento_texto(biblia_textos)
